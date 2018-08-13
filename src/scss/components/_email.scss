@@ -1,5 +1,6 @@
 .wrapper {
     display: flex;
+    min-height: 100vh;
     .content-left {
         width: 200px;
         padding: 1em;
@@ -142,6 +143,9 @@
     }
     .open-body {
         line-height: 1.5;
+        img {
+            max-width: 100%;
+        }
     }
 }
 .achievement {

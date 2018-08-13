@@ -1,6 +1,7 @@
 'use strict';
 
 const Email = require('./email');
+const EmailContent = require('./../helpers/email-content');
 
 class EmailClient {
 	constructor(achievements) {
@@ -8,7 +9,7 @@ class EmailClient {
         this.client = document.getElementById('email-container');
 		this.emails = [];
         this.numberOfEmails = 0;
-        this.totalEmails = 30;
+        this.totalEmails = EmailContent.length;
         this.timesRefreshed = 0;
         this.timesDeleted = 0;
         this.emailsDeleted = 0;
@@ -16,14 +17,14 @@ class EmailClient {
         this.btnRefresh = document.getElementById('btn-refresh');
         this.trashBtnClick = this.trashBtnClick.bind(this);
         this.refreshBtnClick = this.refreshBtnClick.bind(this);
-        this.createEmails();
+        this.createFirstEmails();
         this.addListeners();
         this.emailInterval = setInterval(() => {
             this.createOneMoreEmail();
         }, 60 * 1000);
 	}
-    createEmails() {
-        for (let i = 0; i < 20; i++) {
+    createFirstEmails() {
+        for (let i = 0; i < 5; i++) {
             this.emails[i] = new Email(i, this.achievements);
             this.numberOfEmails++;
         }

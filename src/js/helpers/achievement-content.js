@@ -23,5 +23,10 @@ module.exports = {
         "body": "All caught up",
         "points": 30,
         "hasRun": false
+    },
+    "respond-to-union": {
+        "body": "Respond to the union",
+        "points": -100,
+        "hasRun": false
     }
 }

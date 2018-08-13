@@ -14,7 +14,7 @@ class Achievements {
             AchievementContent[achievementName].hasRun = true;
             let div = document.createElement('div');
             div.classList.add('achievement');
-            div.innerHTML = `<p>ACHIEVEMENT UNLOCKED:</p><p>${AchievementContent[achievementName].body}</p>`;
+            div.innerHTML = `<p>ACHIEVEMENT UNLOCKED:</p><p>${AchievementContent[achievementName].body}</p><p>Points: ${AchievementContent[achievementName].points <= 0 ? '-' + AchievementContent[achievementName].points : AchievementContent[achievementName].points}</p>`;
             div.style.display = 'none';
             document.body.append(div);
             TweenLite.set(div, {
