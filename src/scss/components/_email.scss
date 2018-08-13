@@ -1,0 +1,158 @@
+.wrapper {
+    display: flex;
+    .content-left {
+        width: 200px;
+        padding: 1em;
+        box-sizing: border-box;
+        background-color: $black;
+        color: white;
+    }
+    .content-right {
+        width: 100%;
+    }
+}
+.logo {
+    @include fluid-value(font-size, 18px, 42px);
+    font-weight: bold;
+    text-transform: lowercase;
+}
+.email-header {
+    padding: 1em;
+    box-sizing: border-box;
+    a, a:active, a:visited {
+        color: $black;
+        text-decoration: none;
+    }
+}
+.email {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $black;
+    padding: 1em;
+    cursor: pointer;
+    &:first-child {
+        border-top: 1px solid $black;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &.read {
+        background-color: $gray;
+    }
+    &.unread {
+        background-color: white;
+        &:hover {
+            background-color: lighten($gray, 5%);
+        }
+    }
+    &.active {
+        background-color: $blue;
+        &:hover {
+            background-color: lighten($blue, 5%);
+        }
+        .action-icon {
+            background-color: $black;
+        }
+    }
+    .action-icon {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $black;
+        margin-right: 3%;
+    }
+    .from {
+        width: 20%;
+        margin-right: 5%;
+        white-space: nowrap;
+    }
+    .subject {
+        white-space: nowrap;
+    }
+}
+.email-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: none;
+    .open-content {
+        width: 90%;
+        max-width: 600px;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: scroll;
+        padding: 2em;
+        box-sizing: border-box;
+        border: 1px solid $black;
+    }
+    .email-top, .email-bottom {
+        width: 90%;
+        max-width: 600px;
+        height: 40px;
+        background-color: $black;
+        position: fixed;
+        top: calc(10% - 38px);
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        color: white;
+        h5 {
+            align-self: center;
+            margin-left: 2em;
+        }
+    }
+    .email-bottom {
+        top: auto;
+        bottom: calc(10% - 38px);
+        a {
+            align-self: center;
+            color: white;
+            text-decoration: none;
+            margin-left: 2em;
+            &:visited, &:hover {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    .close-btn {
+        text-decoration: none;
+        font-size: 32px;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: 36px;
+        &:active, &:hover, &:visited {
+            color: white;
+        }
+    }
+    .open-subject {
+        margin-bottom: 1em;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .open-from {
+        color: $dark-gray;
+        margin-bottom: 1em;
+    }
+    .open-body {
+        line-height: 1.5;
+    }
+}
+.achievement {
+    position: fixed;
+    width: 280px;
+    right: 20px;
+    top: 20px;
+    background-color: white;
+    border: 1px solid $black;
+    box-sizing: border-box;
+    padding: 0.6em;
+    line-height: 1.4;
+    font-weight: bold;
+    display: none;
+}

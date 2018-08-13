@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+{% set pageName = 'Our Story' %}
+{% set pageClass = 'home' %}
+{% block title %}
+    <title>EmailSimulator</title>
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="content-left">
+            <h1 class="logo">e-mail</h1>
+        </div>
+        <div class="content-right">
+        	<div class="email-header">
+        		<a href="#" id="btn-trash" class="trash">Trash</a>
+        		<a href="#" id="btn-refresh" class="refresh">Refresh</a>
+        	</div>
+        	<div id="email-container" class="email-container">
+
+            </div>
+        </div>
+    </div>
+    <div id="email-open" class="email-open">
+        <div class="email-top">
+            <h5>Email</h5>
+            <a href="#" id="close-btn" class="close-btn">×</a>
+        </div>
+    	<div class="open-content">
+    		<div class="open-header">
+	    		<h3 id="open-subject" class="open-subject">Respond to me please</h3>
+	    		<h5 id="open-from" class="open-from">Somebody Whoever</h5>
+    		</div>
+    		<div id="open-body" class="open-body">
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque delectus nostrum, natus odit iusto fuga repudiandae. Aut itaque quaerat vero dolorum numquam quisquam ipsum consequatur sit quas cumque, rerum a.</p>
+    		</div>
+    	</div>
+        <div class="email-bottom">
+            <a href="#" class="respond">Respond</a>
+        </div>
+    </div>
+{% endblock %}
