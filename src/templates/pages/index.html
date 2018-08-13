@@ -12,8 +12,8 @@
         </div>
         <div class="content-right">
         	<div class="email-header">
-        		<a href="#" id="btn-trash" class="trash">Trash</a>
-        		<a href="#" id="btn-refresh" class="refresh">Refresh</a>
+        		<a href="#" id="btn-trash" class="trash"></a>
+        		<a href="#" id="btn-refresh" class="refresh"></a>
         	</div>
         	<div id="email-container" class="email-container">
 
@@ -33,9 +33,29 @@
     		<div id="open-body" class="open-body">
     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque delectus nostrum, natus odit iusto fuga repudiandae. Aut itaque quaerat vero dolorum numquam quisquam ipsum consequatur sit quas cumque, rerum a.</p>
     		</div>
+            <div id="p5-container" class="p5-container"></div>
     	</div>
         <div class="email-bottom">
-            <a href="#" class="respond">Respond</a>
+            <a href="#" id="reply" class="reply">Reply</a>
         </div>
     </div>
+    <div id="email-reply" class="email-reply email-open">
+        <div class="email-top">
+            <h5>Email</h5>
+        </div>
+        <div class="open-content">
+            <div class="open-header">
+                <label for="reply-subject">Subject</label>
+                <input name="reply-subject" type="subject" class="open-subject">
+            </div>
+            <div class="open-body">
+                <label for="reply-body">Body</label>
+                <textarea name="reply-body"></textarea>
+            </div>
+        </div>
+        <div class="email-bottom">
+            <a href="#" id="reply-send" class="reply send">Send</a>
+        </div>
+    </div>
+    <div id="p5-fullpage" class="p5-fullpage"></div>
 {% endblock %}

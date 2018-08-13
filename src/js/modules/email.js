@@ -1,7 +1,9 @@
 'use strict';
 
+const p5 = require('p5');
 const EmailContent = require('./../helpers/email-content');
 const noScroll = require('no-scroll');
+const SketchFunctions = require('./../helpers/sketches');
 
 class Email {
     constructor(index, achievements) {
@@ -11,6 +13,7 @@ class Email {
         this.actionIcon = null;
         this.emailOpenContainer = document.getElementById('email-open');
         this.emailCloseBtn = document.getElementById('close-btn');
+        this.emailReplyBtn = document.getElementById('reply');
         this.emailOpenSubject = document.getElementById('open-subject');
         this.emailOpenFrom = document.getElementById('open-from');
         this.emailOpenBody = document.getElementById('open-body');
@@ -21,6 +24,7 @@ class Email {
         this.onEmailClick = this.onEmailClick.bind(this);
         this.closeEmail = this.closeEmail.bind(this);
         this.onActionClick = this.onActionClick.bind(this);
+        this.onReplyClick = this.onReplyClick.bind(this);
         this.createHTML(this.emailIndex);
         this.addListeners();
     }
@@ -59,18 +63,34 @@ class Email {
         this.addContent();
         this.emailOpenContainer.style.display = 'block';
         this.emailCloseBtn.addEventListener('click', this.closeEmail);
+        this.emailReplyBtn.addEventListener('click', this.onReplyClick);
         // check how many unread emails there are
         let emailContainer = document.getElementById('email-container');
         let unreadEmails = [].slice.call(emailContainer.querySelectorAll('.unread'));
         if (unreadEmails.length == 0) {
             this.achievements.showAchievement("up-to-date");
         }
+        if (this.emailType == 'ai') {
+            console.log('we got ai');
+            let fullScreenGlitch = new p5(SketchFunctions.glitch1, 'p5-fullpage');
+            document.getElementById('p5-fullpage').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('p5-fullpage').style.display = 'none';
+                fullScreenGlitch.destroy();
+            }, 500);
+        }
     }
     closeEmail(e) {
-        e.preventDefault();
+        if (e) {
+            e.preventDefault();
+        }
         noScroll.off();
         this.emailOpenContainer.style.display = 'none';
         this.emailCloseBtn.removeEventListener('click', this.closeEmail);
+    }
+    onReplyClick(e) {
+        e.preventDefault();
+        this.closeEmail();
     }
     addContent() {
         this.emailOpenSubject.innerHTML = this.emailSubject;

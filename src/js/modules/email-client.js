@@ -1,6 +1,7 @@
 'use strict';
 
 const Email = require('./email');
+const Reply = require('./reply');
 const EmailContent = require('./../helpers/email-content');
 
 class EmailClient {
@@ -15,8 +16,10 @@ class EmailClient {
         this.emailsDeleted = 0;
         this.btnTrash = document.getElementById('btn-trash');
         this.btnRefresh = document.getElementById('btn-refresh');
+        this.btnReply = document.getElementById('reply');
         this.trashBtnClick = this.trashBtnClick.bind(this);
         this.refreshBtnClick = this.refreshBtnClick.bind(this);
+        this.replyBtnClick = this.replyBtnClick.bind(this);
         this.createFirstEmails();
         this.addListeners();
         this.emailInterval = setInterval(() => {
@@ -32,6 +35,7 @@ class EmailClient {
     addListeners() {
         this.btnTrash.addEventListener('click', this.trashBtnClick);
         this.btnRefresh.addEventListener('click', this.refreshBtnClick);
+        this.btnReply.addEventListener('click', this.replyBtnClick);
     }
     trashBtnClick(e) {
         e.preventDefault();
@@ -63,6 +67,10 @@ class EmailClient {
         this.achievements.showAchievement("refresh");
         this.timesRefreshed++;
     }
+    replyBtnClick(e) {
+        e.preventDefault();
+        new Reply();
+    }
     createOneMoreEmail() {
         if (this.numberOfEmails < this.totalEmails) {
             this.emails[this.numberOfEmails] = new Email(this.numberOfEmails, this.achievements);
@@ -70,6 +78,9 @@ class EmailClient {
         } else {
             clearInterval(this.emailInterval);
         }
+    }
+    createAiResponse() {
+
     }
 }
 

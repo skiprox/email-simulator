@@ -24,9 +24,14 @@ module.exports = {
         "points": 30,
         "hasRun": false
     },
-    "respond-to-union": {
-        "body": "Respond to the union",
-        "points": -100,
+    "respond-to-manager": {
+        "body": "Respond to your manager",
+        "points": 10,
+        "hasRun": false
+    },
+    "respond-to-ai": {
+        "body": "Respond to the AI",
+        "points": 100,
         "hasRun": false
     }
 }

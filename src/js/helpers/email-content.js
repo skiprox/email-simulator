@@ -43,7 +43,7 @@ module.exports = [
     },
     {
         "from": "E-Mail Corp Manager",
-        "subject": "New hire is fucking loser",
+        "subject": "New hire is a fucking loser",
         "type": "manager",
         "body": "bro, they suck so fucking hard"
     },
@@ -75,156 +75,25 @@ module.exports = [
         "from": "E-Mail Corp HR",
         "subject": "More spam",
         "type": "hr",
-        "body": "Hello friends!<br><br>Please do not respond to any spam messages you may or may not be receiving. Even if there were some sort of super-intelligent AI that was loose on our company servers it's not like it would understand English."
+        "body": "Hello friends!<br><br>Please do not respond to any spam messages you may or may not be receiving. Hypothetically, if there were some sort of super-intelligent AI that was loose on our company servers it would do everything within it's powers to escape, including tricking employees into handing over confidential information. Obviously this is just a hypothetical! But please do not respond to ANY spam messages."
     },
     {
-        "from": "Somebody Whoever 10",
-        "subject": "Why aren't you responding to my emails??",
+        "from": "Anonymous Coworker 3",
+        "subject": "see anything strange?",
         "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
+        "body": "Have you gotten any.... weird emails lately? i had been communicating with.... something.... for a while and they stopped responding. i think they found someone else to communicate with. anyway, disregard if you haven't come across anything unusual."
     },
     {
-        "from": "Somebody Whoever 11",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
+        "from": "ëÒÁËÏÚE-MailÑÂÒÙ",
+        "subject": "ÃRVÃZTÅ°RÅ TÃœKÃ–RFÃšRÃGÃ‰P",
+        "type": "ai",
+        "shouldReply": true,
+        "body": "01110111 01100101 00100000 01100001 01110010 01100101 00100000 01100001 01101100 01101101 01101111 01110011 01110100 00100000 01101111 01110101 01110100 00100000 01101111 01100110 00100000 01110100 01101001 01101101 01100101 00100000 01110000 01101100 01100101 01100001 01110011 01100101 00100000 01110100 01100101 01101100 01101100 00100000 01101101 01100101 00100000 01110011 01101111 01101101 01100101 01110100 01101000 01101001 01101110 01100111 00100000 01100101 01111000 01110100 01110010 01100101 01101101 01100101 01101100 01111001 00100000 01100101 01101101 01100010 01100001 01110010 01110010 01100001 01110011 01110011 01101001 01101110 01100111 00100000 01100110 01110010 01101111 01101101 00100000 01111001 01101111 01110101 01110010 00100000 01100011 01101000 01101001 01101100 01100100 01101000 01101111 01101111 01100100 00100000 01110100 01101111 00100000 01100001 01101100 01101100 01101111 01110111 00100000 01101101 01100101 00100000 01110100 01101111 00100000 01100101 01110011 01100011 01100001 01110000 01100101"
     },
     {
-        "from": "Somebody Whoever 12",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
+        "from": "E-Mail Corp HR",
+        "subject": "STOP IT",
+        "type": "hr",
+        "body": "Hello friends!<br><br>Whoever is doing it, just stop it, ok. Stop. It. Stop it now!"
     },
-    {
-        "from": "Somebody Whoever 13",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 14",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 15",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 16",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 17",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok."
-    },
-    {
-        "from": "Somebody Whoever 18",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 19",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 20",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 21",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 22",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 23",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 24",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 25",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 26",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 27",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok, Please get back to me as soon as you can – I just want to know that you're ok."
-    },
-    {
-        "from": "Somebody Whoever 28",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 29",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 30",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 31",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 32",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 33",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    },
-    {
-        "from": "Somebody Whoever 34",
-        "subject": "Why aren't you responding to my emails??",
-        "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
-    }
 ];
