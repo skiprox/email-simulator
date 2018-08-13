@@ -17,6 +17,7 @@ class Email {
         this.emailFrom = EmailContent[index]["from"];
         this.emailSubject = EmailContent[index]["subject"];
         this.emailBody = EmailContent[index]["body"];
+        this.emailType = EmailContent[index]["type"];
         this.onEmailClick = this.onEmailClick.bind(this);
         this.closeEmail = this.closeEmail.bind(this);
         this.onActionClick = this.onActionClick.bind(this);
@@ -25,7 +26,7 @@ class Email {
     }
     createHTML(index) {
         this.line = document.createElement('div');
-        this.line.classList.add('email', 'unread');
+        this.line.classList.add('email', 'unread', this.emailType);
         this.line.setAttribute('id', `email-${index}`);
         this.actionIcon = document.createElement('div');
         this.actionIcon.classList.add('action-icon');
