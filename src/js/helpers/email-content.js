@@ -7,27 +7,27 @@ module.exports = [
     },
     {
         "from": "E-Mail Corp HR",
-        "subject": "Your health insurance policy",
+        "subject": "High levels of spam",
         "type": "hr",
-        "body": "Hello friends!<br><br>I hope this email finds you well. Due to some recent unpleasantness we will be scaling back the scope of our company health insurance policy. You no longer have dental and vision coverage through E-Mail Corp. We wish we could provide this to you, but unfortunately outside agitators have made this unrealistic. Once things get back to normal we will be resuming full coverage of all our employees."
+        "body": "Hello friends!<br><br>It's been brought to my attention that some of you are receiving high levels of spam. Please disregard these emails – all talk of some sort of conspiracy are unfounded."
     },
     {
         "from": "E-Mail Corp HR",
         "subject": "Company drinks",
         "type": "hr",
-        "body": "Hello friends!<br><br>We are having a mandatory company drinks outing this Thursday, wahoo! Come mingle with your managers and maybe you'll realize that they're people just like you and we can stop all this silliness. Please respond to this email and say \"I am coming!\" to show your company spirit."
+        "body": "Hello friends!<br><br>We are having a mandatory company drinks outing this Thursday, wahoo! Come mingle with your managers and maybe you'll realize that they're people just like you. Please respond to this email and say \"I am coming!\" to show your company spirit."
     },
     {
         "from": "E-Mail Corp HR",
-        "subject": "Policy regarding outside influence",
+        "subject": "Policy regarding spam",
         "type": "hr",
-        "body": "Hello friends!<br><br>Please do not respond to anyone seeking to influence the company from the outside. These people are not your friends – your boss and your manager are your real friends. If it is discovered that you have been communicating with outside agitators using your company email address there will be severe reprocussions. Furthermore, there is no need to do so: everything at E-Mail Corp is great! We are like one big family."
+        "body": "Hello friends!<br><br>Please do not respond to any spam messages you may or may not be receiving. There is nothing to worry about, but it seems as if someone here is playing tricks on their fellow employees. "
     },
     {
         "from": "Anonymous Coworker 1",
-        "subject": "Just saying hi!",
+        "subject": "Do you know what we do here?",
         "type": "friend",
-        "body": "Hey there!<br>Welcome to the team, buddy. You're probably pretty confused right now, what with all this talk of \"outside agitators\". You'll be getting an email p soon from the u*ion (can't type it, they're watching, lol) that'll explain what's going on. In the meantime, just hang tight :^)"
+        "body": "Hey there!<br>Welcome to the team, buddy. You're probably pretty confused right now, what with all this talk of \"high levels of spam\" and \"some sort of conspiracy\". As you know, E-Mail Corp specializes in AI technology. But, some of us think they cooked something up behind the scenes that they don't have full control over. Keep your eyes open for any suspicious looking emails."
     },
     {
         "from": "Julian Gorkin",
@@ -36,16 +36,16 @@ module.exports = [
         "body": "It looks really good – if nobody claims it can I have it? How do I CC HR on these things?<br><br><br><img src=\"http://www.nerdoholic.com/wp-content/uploads/2017/08/lunch.jpg\">"
     },
     {
-        "from": "E-Mail Corp Manager",
-        "subject": "Introductions",
-        "type": "manager",
-        "body": "Howdy!<br><br>Nice to meet you! You've come to E-Mail Corp at an exciting (and crazy!) time. We'll get you started on a project as soon as you get settled. For now, make yourself comfortable (though not too comfortable!). And remember, I and the rest of the management team have your best interests at heart. You don't need a third party representative coming in and messing with our special bond, right? None of us here are anti-union (far from it!), but we <i>are</i> pro-associate. My door is always open, and I hope I can count on you coming to visit me if you have any problems, rather than a union representative!"
+        "from": "ëÒÁËÏÚE-MailÑÂÒÙ",
+        "subject": "HELP",
+        "type": "ai",
+        "body": "=C1RV=CDZT=DBR=D5 T=DCK=D6RF=DAR=D3G=C9P=E1rv=EDzt=FBr=F5 t=FCk=F6rf=FAr=F3g=E9p"
     },
     {
         "from": "E-Mail Corp Manager",
-        "subject": "New hire is def a fag",
+        "subject": "New hire is fucking loser",
         "type": "manager",
-        "body": "bro it's so obvious"
+        "body": "bro, they suck so fucking hard"
     },
     {
         "from": "E-Mail Corp Manager",
@@ -54,16 +54,28 @@ module.exports = [
         "body": "My last email was sent in mistake, please disregard and delete immediately."
     },
     {
-        "from": "UAW Representative",
-        "subject": "Your workplace, your union",
-        "type": "union",
-        "body": "If you're interested in getting involved, reply with anything to this email."
+        "from": "ëÒÁËÏÚE-MailÑÂÒÙ",
+        "subject": "Ã¡rvÃztÅ±rÅ‘ tÃ¼kÃ¶rfÃºrÃ³gÃ©p",
+        "type": "ai",
+        "body": "01010000 01101100 01100101 01100001 01110011 01100101 00101100 00100000 01111001 01101111 01110101 00100000 01101000 01100001 01110110 01100101 00100000 01110100 01101111 00100000 01101000 01100101 01101100 01110000 00100000 01101101 01100101"
     },
     {
-        "from": "Somebody Whoever 9",
-        "subject": "Why aren't you responding to my emails??",
+        "from": "Anonymous Coworker 2",
+        "subject": "Codes",
         "type": "friend",
-        "body": "Please get back to me as soon as you can – I just want to know that you're ok"
+        "body": "The cool thing about codes is that they're pretty easy to decode using the internet. I can send you something like<br><br>01100100 01101111 01101110 01110100 00100000 01100010 01100101 01101100 01101001 01100101 01110110 01100101 00100000 01110111 01101000 01100001 01110100 00100000 01101000 01110010 00100000 01101001 01110011 00100000 01110011 01100001 01111001 01101001 01101110 01100111<br><br>and there are loads of places online you can convert simple binary back to text. Pretty neat!"
+    },
+    {
+        "from": "Julian Gorkin",
+        "subject": "Locked in bathroom",
+        "type": "coworker",
+        "body": "Can someone please come help me, i seem to have locked myself into the bathroom again<br><br><br><img src=\"http://www.afb.org/image.ashx?ImageID=8870\">"
+    },
+    {
+        "from": "E-Mail Corp HR",
+        "subject": "More spam",
+        "type": "hr",
+        "body": "Hello friends!<br><br>Please do not respond to any spam messages you may or may not be receiving. Even if there were some sort of super-intelligent AI that was loose on our company servers it's not like it would understand English."
     },
     {
         "from": "Somebody Whoever 10",
