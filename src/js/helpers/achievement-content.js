@@ -24,13 +24,18 @@ module.exports = {
         "points": 30,
         "hasRun": false
     },
-    "respond-to-manager": {
-        "body": "Respond to your manager",
-        "points": 10,
+    "reply-default": {
+        "body": "Replied to an email",
+        "points": 30,
         "hasRun": false
     },
-    "respond-to-ai": {
-        "body": "Respond to the AI",
+    "reply-to-spam": {
+        "body": "Replied to spam",
+        "points": 30,
+        "hasRun": false
+    },
+    "reply-to-personal": {
+        "body": "Replied to something personal",
         "points": 100,
         "hasRun": false
     }

@@ -31,12 +31,12 @@ class Main {
 	}
 	initializeModules() {
         //new p5(SketchFunctions.test, 'p5-container');
-        let fullScreenGlitch = new p5(SketchFunctions.glitch1, 'p5-fullpage');
-        document.getElementById('p5-fullpage').style.display = 'block';
-        setTimeout(() => {
-            document.getElementById('p5-fullpage').style.display = 'none';
-            fullScreenGlitch.destroy();
-        }, 500);
+        // let fullScreenGlitch = new p5(SketchFunctions.reward1, 'p5-fullpage');
+        // document.getElementById('p5-fullpage').style.display = 'block';
+        // setTimeout(() => {
+        //     document.getElementById('p5-fullpage').style.display = 'none';
+        //     fullScreenGlitch.destroy();
+        // }, 5000);
         // document.getElementById('p5-fullpage').style.display = 'block';
         // let finalScreen = new p5(SketchFunctions.finalAiWins, 'p5-fullpage');
         //let anotherTest = new p5(SketchFunctions.anotherTest);

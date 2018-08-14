@@ -20,18 +20,12 @@ class EmailClient {
         this.trashBtnClick = this.trashBtnClick.bind(this);
         this.refreshBtnClick = this.refreshBtnClick.bind(this);
         this.replyBtnClick = this.replyBtnClick.bind(this);
-        this.createFirstEmails();
+        this.createOneEmail();
         this.addListeners();
         this.emailInterval = setInterval(() => {
-            this.createOneMoreEmail();
+            this.createOneEmail();
         }, 60 * 1000);
 	}
-    createFirstEmails() {
-        for (let i = 0; i < 5; i++) {
-            this.emails[i] = new Email(i, this.achievements);
-            this.numberOfEmails++;
-        }
-    }
     addListeners() {
         this.btnTrash.addEventListener('click', this.trashBtnClick);
         this.btnRefresh.addEventListener('click', this.refreshBtnClick);
@@ -60,23 +54,26 @@ class EmailClient {
         e.preventDefault();
         clearInterval(this.emailInterval);
         this.emailInterval = null;
-        this.createOneMoreEmail();
+        this.createOneEmail();
         this.emailInterval = setInterval(() => {
-            this.createOneMoreEmail();
+            this.createOneEmail();
         }, 60 * 1000);
         this.achievements.showAchievement("refresh");
         this.timesRefreshed++;
     }
     replyBtnClick(e) {
         e.preventDefault();
-        new Reply();
+        // new Reply(this.achievements);
     }
-    createOneMoreEmail() {
+    createOneEmail() {
         if (this.numberOfEmails < this.totalEmails) {
             this.emails[this.numberOfEmails] = new Email(this.numberOfEmails, this.achievements);
             this.numberOfEmails++;
         } else {
-            clearInterval(this.emailInterval);
+            this.numberOfEmails = 1;
+            this.emails[this.numberOfEmails] = new Email(this.numberOfEmails, this.achievements);
+            this.numberOfEmails++;
+            // clearInterval(this.emailInterval);
         }
     }
     createAiResponse() {

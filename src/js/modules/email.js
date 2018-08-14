@@ -4,6 +4,7 @@ const p5 = require('p5');
 const EmailContent = require('./../helpers/email-content');
 const noScroll = require('no-scroll');
 const SketchFunctions = require('./../helpers/sketches');
+const Reply = require('./reply');
 
 class Email {
     constructor(index, achievements) {
@@ -91,11 +92,13 @@ class Email {
     onReplyClick(e) {
         e.preventDefault();
         this.closeEmail();
+        new Reply(this.achievements, this.emailType);
     }
     addContent() {
         this.emailOpenSubject.innerHTML = this.emailSubject;
         this.emailOpenFrom.innerHTML = this.emailFrom;
         this.emailOpenBody.innerHTML = this.emailBody;
+        this.currentOpenEmailType = this.emailType;
     }
     destroy() {
         console.log('we should destroy');
