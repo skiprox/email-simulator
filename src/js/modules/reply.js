@@ -9,6 +9,8 @@ class Reply {
         this.emailReply = document.getElementById('email-reply');
         this.sendBtn = document.getElementById('reply-send');
         this.closeBtn = document.getElementById('reply-close-btn');
+        this.replySubject = document.getElementById('reply-subject');
+        this.replyBody = document.getElementById('reply-body');
         this.emailReply.style.display = 'block';
         this.onSendBtnClick = this.onSendBtnClick.bind(this);
         this.onCloseBtnClick = this.onCloseBtnClick.bind(this);
@@ -38,6 +40,8 @@ class Reply {
     }
     destroy() {
         this.sendBtn.removeEventListener('click', this.onSendBtnClick);
+        this.replySubject.value = '';
+        this.replyBody.value = '';
         this.emailReply.style.display = 'none';
     }
 }
