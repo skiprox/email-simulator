@@ -3,6 +3,8 @@
 const Email = require('./email');
 const Reply = require('./reply');
 const EmailContent = require('./../helpers/email-content');
+const p5 = require('p5');
+const SketchFunctions = require('./../helpers/sketches');
 
 class EmailClient {
 	constructor(achievements) {
@@ -17,9 +19,13 @@ class EmailClient {
         this.btnTrash = document.getElementById('btn-trash');
         this.btnRefresh = document.getElementById('btn-refresh');
         this.btnReply = document.getElementById('reply');
+        this.btnClose = document.getElementById('close-btn');
+        this.btnReplyClose = document.getElementById('reply-close-btn');
+        this.btnReplySend = document.getElementById('reply-send');
         this.trashBtnClick = this.trashBtnClick.bind(this);
         this.refreshBtnClick = this.refreshBtnClick.bind(this);
         this.replyBtnClick = this.replyBtnClick.bind(this);
+        this.checkGameEnd = this.checkGameEnd.bind(this);
         this.createOneEmail();
         this.addListeners();
         this.emailInterval = setInterval(() => {
@@ -30,6 +36,9 @@ class EmailClient {
         this.btnTrash.addEventListener('click', this.trashBtnClick);
         this.btnRefresh.addEventListener('click', this.refreshBtnClick);
         this.btnReply.addEventListener('click', this.replyBtnClick);
+        this.btnClose.addEventListener('click', this.checkGameEnd);
+        this.btnReplyClose.addEventListener('click', this.checkGameEnd);
+        this.btnReplySend.addEventListener('click', this.checkGameEnd);
     }
     trashBtnClick(e) {
         e.preventDefault();
@@ -49,6 +58,7 @@ class EmailClient {
             this.achievements.showAchievement("delete-multiple");
         }
         this.timesDeleted++;
+        this.checkGameEnd();
     }
     refreshBtnClick(e) {
         e.preventDefault();
@@ -63,21 +73,32 @@ class EmailClient {
     }
     replyBtnClick(e) {
         e.preventDefault();
-        // new Reply(this.achievements);
     }
     createOneEmail() {
         if (this.numberOfEmails < this.totalEmails) {
             this.emails[this.numberOfEmails] = new Email(this.numberOfEmails, this.achievements);
             this.numberOfEmails++;
         } else {
-            this.numberOfEmails = 1;
-            this.emails[this.numberOfEmails] = new Email(this.numberOfEmails, this.achievements);
-            this.numberOfEmails++;
-            // clearInterval(this.emailInterval);
+            clearInterval(this.emailInterval);
+        }
+        if (this.numberOfEmails == this.totalEmails) {
+            this.btnRefresh.parentElement.removeChild(this.btnRefresh);
         }
     }
-    createAiResponse() {
-
+    checkGameEnd() {
+        let remainingEmails = [].slice.call(this.client.querySelectorAll('.email'));
+        let readEmails = [].slice.call(this.client.querySelectorAll('.read'));
+        if (remainingEmails.length == 0 &&
+            this.numberOfEmails == this.totalEmails) {
+            this.showGameEndScreen();
+        } else if (remainingEmails.length == readEmails.length &&
+            document.getElementById('btn-refresh') == null) {
+            this.showGameEndScreen();
+        }
+    }
+    showGameEndScreen() {
+        let fullScreenGlitch = new p5(SketchFunctions.gameOver, 'p5-fullpage');
+        document.getElementById('p5-fullpage').style.display = 'block';
     }
 }
 

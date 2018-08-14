@@ -15,7 +15,7 @@ module.exports = [
         "from": "Fanny Kaplan",
         "subject": "i'll elucidate",
         "type": "personal",
-        "body": "It's been really good. things got really serious really quickly, which has kind of freaked me out a bit, but it's sort of really good and feels right and so on. but the whole intensity of it happening in edinburgh, plus living together, is a bit of a scary though"
+        "body": "It's been really good. things got really serious really quickly, which has kind of freaked me out a bit, but it's sort of really good and feels right and so on. but the whole intensity of it happening in edinburgh, plus living together, is a bit of a scary thought"
     },
     {
         "from": "Brian Ganin",

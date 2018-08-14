@@ -1,23 +1,39 @@
 'use strict';
 
 const p5 = require('p5');
+const fontMultiplier = window.innerWidth < 800 ? 0.4 : 1;
 
 const SketchFunctions = {
-    glitch1: (p5) => {
+    startScreen: (p5) => {
         let shouldDestroy = false;
         p5.setup = () => {
             p5.createCanvas(window.innerWidth, window.innerHeight);
-            p5.background(255);
+            p5.background(0);
+            p5.noStroke();
         }
         p5.draw = () => {
             if (shouldDestroy) {
                 p5.remove();
+                document.getElementById('p5-fullpage').style.display = 'none';
             } else {
-                p5.background(Math.random() * 255);
+                p5.background(0);
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.textSize(120 * fontMultiplier);
+                p5.textAlign(p5.CENTER, p5.CENTER);
+                p5.text("EMAIL", window.innerWidth/2, window.innerHeight/2 - 50);
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.textSize(48 * fontMultiplier);
+                p5.text("the game", window.innerWidth/2, window.innerHeight/2 + 30);
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.textSize(32 * fontMultiplier);
+                p5.text("(click anywhere to start)", window.innerWidth/2, window.innerHeight/2 + 100);
             }
         }
+        p5.mousePressed = () => {
+            console.log('hello world!');
+            p5.destroy();
+        }
         p5.destroy = () => {
-            console.log('we should destroy');
             shouldDestroy = true;
         }
     },
@@ -48,8 +64,8 @@ const SketchFunctions = {
                 p5.renderBalls();
                 p5.textAlign(p5.CENTER, p5.CENTER);
                 p5.fill(0);
-                p5.textSize(120);
-                p5.text("KEEP IT UP!", window.innerWidth/2, window.innerHeight/2)
+                p5.textSize(100 * fontMultiplier);
+                p5.text("OVER 100 POINTS!\nKEEP IT UP!", window.innerWidth/2, window.innerHeight/2);
             }
         }
         p5.updateBalls = () => {
@@ -82,21 +98,155 @@ const SketchFunctions = {
             shouldDestroy = true;
         }
     },
-    keepGoing: (p5) => {
+    reward2: (p5) => {
+        let balls = [];
         let shouldDestroy = false;
+        let maxD = 200;
         p5.setup = () => {
             p5.createCanvas(window.innerWidth, window.innerHeight);
             p5.background(255);
+            p5.noStroke();
+            for (let i = 0; i < 200; i++) {
+                balls[i] = {
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
+                    color: p5.color(Math.random() * 255, Math.random() * 255, Math.random() * 255),
+                    diameter: Math.random() * 100 + 20,
+                    speedD: Math.random() * 5 + 5
+                }
+            }
         }
         p5.draw = () => {
             if (shouldDestroy) {
                 p5.remove();
             } else {
-                p5.background(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.background(255);
+                p5.updateBalls();
+                p5.bounceBalls();
+                p5.renderBalls();
                 p5.textAlign(p5.CENTER, p5.CENTER);
-                p5.fill(255);
-                p5.textSize(120);
-                p5.text("KEEP GOING!", window.innerWidth/2, window.innerHeight/2)
+                p5.fill(0);
+                p5.textSize(100 * fontMultiplier);
+                p5.text("OVER 200 POINTS!\nGOOD JOB!", window.innerWidth/2, window.innerHeight/2);
+            }
+        }
+        p5.updateBalls = () => {
+            let i = balls.length;
+            while (i--) {
+                balls[i].diameter = balls[i].diameter + balls[i].speedD;
+            }
+        }
+        p5.bounceBalls = () => {
+            let i = balls.length;
+            while (i--) {
+                if((balls[i].diameter > maxD) || (balls[i].diameter <= 20)) {
+                    balls[i].speedD *= -1;
+                }
+            }
+        }
+        p5.renderBalls = () => {
+            let i = balls.length;
+            while (i--) {
+                p5.fill(balls[i].color);
+                p5.ellipse(balls[i].x, balls[i].y, balls[i].diameter, balls[i].diameter);
+            }
+        }
+        p5.destroy = () => {
+            console.log('we should destroy');
+            shouldDestroy = true;
+        }
+    },
+    reward3: (p5) => {
+        let balls = [];
+        let shouldDestroy = false;
+        let maxD = 200;
+        p5.setup = () => {
+            p5.createCanvas(window.innerWidth, window.innerHeight);
+            p5.background(255);
+            p5.noStroke();
+            for (let i = 0; i < 200; i++) {
+                balls[i] = {
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
+                    color: p5.color(Math.random() * 255, Math.random() * 255, Math.random() * 255),
+                    heightX: Math.random() * 100 + 20,
+                    heightY: Math.random() * 100 + 20,
+                    speedX: (Math.random() * 15 + 5) * (i % 2),
+                    speedY: (Math.random() * 15 + 5) * ((i + 1) % 2)
+                }
+            }
+        }
+        p5.draw = () => {
+            if (shouldDestroy) {
+                p5.remove();
+            } else {
+                p5.background(255);
+                p5.updateBalls();
+                p5.bounceBalls();
+                p5.renderBalls();
+                p5.textAlign(p5.CENTER, p5.CENTER);
+                p5.fill(0);
+                p5.textSize(100 * fontMultiplier);
+                p5.text("OVER 300 POINTS!\nAMAZING!", window.innerWidth/2, window.innerHeight/2);
+            }
+        }
+        p5.updateBalls = () => {
+            let i = balls.length;
+            while (i--) {
+                balls[i].y = balls[i].y + balls[i].speedY;
+                balls[i].x = balls[i].x + balls[i].speedX;
+            }
+        }
+        p5.bounceBalls = () => {
+            let i = balls.length;
+            while (i--) {
+                if((balls[i].x > window.innerWidth) || (balls[i].x < 0)) {
+                    balls[i].speedX = balls[i].speedX * -1;
+                }
+                if((balls[i].y > window.innerHeight) || (balls[i].y < 0)) {
+                    balls[i].speedY = balls[i].speedY * -1;
+                }
+            }
+        }
+        p5.renderBalls = () => {
+            let i = balls.length;
+            while (i--) {
+                p5.fill(balls[i].color);
+                p5.rect(balls[i].x, balls[i].y, balls[i].heightX, balls[i].heightY);
+            }
+        }
+        p5.destroy = () => {
+            console.log('we should destroy');
+            shouldDestroy = true;
+        }
+    },
+    gameOver: (p5) => {
+        let shouldDestroy = false;
+        let points = this;
+        p5.setup = () => {
+            p5.createCanvas(window.innerWidth, window.innerHeight);
+            p5.background(0);
+            p5.noStroke();
+        }
+        p5.draw = () => {
+            if (shouldDestroy) {
+                p5.remove();
+            } else {
+                p5.background(0);
+                p5.textAlign(p5.CENTER, p5.CENTER);
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.textSize(120 * fontMultiplier);
+                p5.text("GAME OVER!", window.innerWidth/2, window.innerHeight/2 - 100);
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.textSize(60 * fontMultiplier);
+                p5.text("(you are all caught up with email)", window.innerWidth/2, window.innerHeight/2);
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.textSize(32 * fontMultiplier);
+                p5.text(`score: ${document.getElementById('points').innerText}`, window.innerWidth/2, window.innerHeight/2 + 75);
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.text("made by Sean Scanlan", window.innerWidth/2, window.innerHeight/2 + 125);
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.text("refresh to try again", window.innerWidth/2, window.innerHeight/2 + 175);
             }
         }
         p5.destroy = () => {

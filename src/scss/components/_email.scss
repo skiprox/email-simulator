@@ -7,9 +7,16 @@
         box-sizing: border-box;
         background-color: $black;
         color: white;
+        flex-shrink: 0;
+        @include viewport(sm) {
+            width: 120px;
+        }
     }
     .content-right {
-        width: 100%;
+        width: calc(100% - 200px);
+        @include viewport(sm) {
+            width: calc(100% - 120px);
+        }
     }
 }
 .logo {
@@ -37,6 +44,7 @@
 .email {
     display: flex;
     flex-direction: row;
+    align-items: center;
     border-bottom: 1px solid $black;
     padding: 1em;
     cursor: pointer;
@@ -69,14 +77,20 @@
         height: 20px;
         border: 1px solid $black;
         margin-right: 3%;
+        @include viewport(sm) {
+            width: 14px;
+            height: 14px;
+        }
     }
     .from {
         width: 20%;
         margin-right: 5%;
         white-space: nowrap;
+        overflow: hidden;
     }
     .subject {
         white-space: nowrap;
+        overflow: hidden;
     }
 }
 .email-open {
@@ -184,7 +198,7 @@
     position: fixed;
     width: 280px;
     right: 20px;
-    top: 20px;
+    bottom: 20px;
     background-color: white;
     border: 1px solid $black;
     box-sizing: border-box;
@@ -200,5 +214,5 @@
     top: 0;
     left: 0;
     background-color: white;
-    display: none;
+    display: block;
 }

@@ -30,6 +30,8 @@ class Main {
 		this.initializeModules();
 	}
 	initializeModules() {
+        let startScreen = new p5(SketchFunctions.startScreen, 'p5-fullpage');
+        document.getElementById('p5-fullpage').style.display = 'block';
         //new p5(SketchFunctions.test, 'p5-container');
         // let fullScreenGlitch = new p5(SketchFunctions.reward1, 'p5-fullpage');
         // document.getElementById('p5-fullpage').style.display = 'block';
