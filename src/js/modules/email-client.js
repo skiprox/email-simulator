@@ -82,7 +82,9 @@ class EmailClient {
             clearInterval(this.emailInterval);
         }
         if (this.numberOfEmails == this.totalEmails) {
-            this.btnRefresh.parentElement.removeChild(this.btnRefresh);
+            if (this.btnRefresh) {
+                this.btnRefresh.parentElement.removeChild(this.btnRefresh);
+            }
             clearInterval(this.emailInterval);
         }
     }
