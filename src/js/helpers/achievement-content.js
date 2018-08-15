@@ -24,9 +24,19 @@ module.exports = {
         "points": 30,
         "hasRun": false
     },
-    "respond-to-union": {
-        "body": "Respond to the union",
-        "points": -100,
+    "reply-default": {
+        "body": "Replied to an email",
+        "points": 30,
+        "hasRun": false
+    },
+    "reply-to-spam": {
+        "body": "Replied to spam",
+        "points": 30,
+        "hasRun": false
+    },
+    "reply-to-personal": {
+        "body": "Replied to something personal",
+        "points": 80,
         "hasRun": false
     }
 }

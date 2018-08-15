@@ -7,9 +7,16 @@
         box-sizing: border-box;
         background-color: $black;
         color: white;
+        flex-shrink: 0;
+        @include viewport(sm) {
+            width: 120px;
+        }
     }
     .content-right {
-        width: 100%;
+        width: calc(100% - 200px);
+        @include viewport(sm) {
+            width: calc(100% - 120px);
+        }
     }
 }
 .logo {
@@ -20,14 +27,24 @@
 .email-header {
     padding: 1em;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
     a, a:active, a:visited {
         color: $black;
         text-decoration: none;
+    }
+    .trash {
+        @include image('images/trash.png', 22px, 25px);
+        margin-right: 2em;
+    }
+    .refresh {
+        @include image('images/refresh.png', 24px, 24px);
     }
 }
 .email {
     display: flex;
     flex-direction: row;
+    align-items: center;
     border-bottom: 1px solid $black;
     padding: 1em;
     cursor: pointer;
@@ -60,14 +77,20 @@
         height: 20px;
         border: 1px solid $black;
         margin-right: 3%;
+        @include viewport(sm) {
+            width: 14px;
+            height: 14px;
+        }
     }
     .from {
         width: 20%;
         margin-right: 5%;
         white-space: nowrap;
+        overflow: hidden;
     }
     .subject {
         white-space: nowrap;
+        overflow: hidden;
     }
 }
 .email-open {
@@ -148,11 +171,34 @@
         }
     }
 }
+.email-reply {
+    // display: block;
+    label {
+        margin-bottom: 1em;
+    }
+    input, textarea, label {
+        display: block;
+    }
+    input, textarea {
+        border: 1px solid $black;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 0.2em;
+    }
+    textarea {
+        width: 100%;
+        height: 240px;
+    }
+    .open-subject {
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
 .achievement {
     position: fixed;
     width: 280px;
     right: 20px;
-    top: 20px;
+    bottom: 20px;
     background-color: white;
     border: 1px solid $black;
     box-sizing: border-box;
@@ -160,4 +206,13 @@
     line-height: 1.4;
     font-weight: bold;
     display: none;
+}
+.p5-fullpage {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: block;
 }
