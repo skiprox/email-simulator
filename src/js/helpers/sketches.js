@@ -398,7 +398,7 @@ const SketchFunctions = {
                 p5.text("(you are all caught up with email)", window.innerWidth/2, window.innerHeight/2);
                 p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
                 p5.textSize(32 * fontMultiplier);
-                p5.text(`score: ${document.getElementById('points').innerText}`, window.innerWidth/2, window.innerHeight/2 + 75);
+                p5.text(`${document.getElementById('points').innerText}`, window.innerWidth/2, window.innerHeight/2 + 75);
                 p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
                 p5.text("made by Sean Scanlan", window.innerWidth/2, window.innerHeight/2 + 125);
                 p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);

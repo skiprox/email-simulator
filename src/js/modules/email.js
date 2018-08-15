@@ -59,7 +59,6 @@ class Email {
         }
     }
     openEmail() {
-        this.achievements.showAchievement("open-email");
         noScroll.on();
         this.addContent();
         this.emailOpenContainer.style.display = 'block';
@@ -70,6 +69,8 @@ class Email {
         let unreadEmails = [].slice.call(emailContainer.querySelectorAll('.unread'));
         if (unreadEmails.length == 0) {
             this.achievements.showAchievement("up-to-date");
+        } else {
+            this.achievements.showAchievement("open-email");
         }
         if (this.emailType == 'ai') {
             console.log('we got ai');

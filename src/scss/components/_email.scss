@@ -40,6 +40,11 @@
     .refresh {
         @include image('images/refresh.png', 24px, 24px);
     }
+    .points {
+        font-size: 22px;
+        font-weight: bold;
+        margin-left: auto;
+    }
 }
 .email {
     display: flex;

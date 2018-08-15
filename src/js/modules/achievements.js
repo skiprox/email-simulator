@@ -87,7 +87,7 @@ class Achievements {
                         document.getElementById('p5-fullpage').style.display = 'none';
                         fullScreenGlitch.destroy();
                     }, 5000);
-                } else if (this.achievementSketchLevel == 6 && this.achievementPoints >= 600) {
+                } else if (this.achievementSketchLevel == 6 && this.achievementPoints >= 700) {
                     this.achievementSketchLevel++;
                     let fullScreenGlitch = new p5(SketchFunctions.reward7, 'p5-fullpage');
                     document.getElementById('p5-fullpage').style.display = 'block';
@@ -100,7 +100,7 @@ class Achievements {
         }
     }
     updatePoints() {
-        this.pointsCounter.innerText = this.achievementPoints;
+        this.pointsCounter.innerText = `Points: ${this.achievementPoints}`;
     }
 }
 

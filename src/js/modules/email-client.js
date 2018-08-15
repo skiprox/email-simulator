@@ -5,6 +5,7 @@ const Reply = require('./reply');
 const EmailContent = require('./../helpers/email-content');
 const p5 = require('p5');
 const SketchFunctions = require('./../helpers/sketches');
+const intervalLength = 10 * 1000;
 
 class EmailClient {
 	constructor(achievements) {
@@ -30,7 +31,7 @@ class EmailClient {
         this.addListeners();
         this.emailInterval = setInterval(() => {
             this.createOneEmail();
-        }, 60 * 1000);
+        }, intervalLength);
 	}
     addListeners() {
         this.btnTrash.addEventListener('click', this.trashBtnClick);
@@ -67,7 +68,7 @@ class EmailClient {
         this.createOneEmail();
         this.emailInterval = setInterval(() => {
             this.createOneEmail();
-        }, 60 * 1000);
+        }, intervalLength);
         this.achievements.showAchievement("refresh");
         this.timesRefreshed++;
     }
