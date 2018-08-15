@@ -25,9 +25,25 @@
 }
 @keyframes move-it {
     0% {
-        transform: translateX(-10px);
+        transform: translateX(-2px);
     }
     100% {
-        transform: translateX(10px);
+        transform: translateX(2px);
+    }
+}
+@keyframes subtle-bounce {
+    0% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: scale(-1deg);
+    }
+}
+@keyframes scale-it {
+    0% {
+        transform: translate(-50%, -50%) scale(0.9, 0.9) rotate(8deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.1, 1.1) rotate(-4deg);
     }
 }
