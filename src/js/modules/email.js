@@ -88,6 +88,7 @@ class Email {
         noScroll.off();
         this.emailOpenContainer.style.display = 'none';
         this.emailCloseBtn.removeEventListener('click', this.closeEmail);
+        this.emailReplyBtn.removeEventListener('click', this.onReplyClick);
     }
     onReplyClick(e) {
         e.preventDefault();

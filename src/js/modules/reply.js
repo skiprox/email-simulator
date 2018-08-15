@@ -1,7 +1,5 @@
 'use strict';
 
-const Email = require('./email');
-
 class Reply {
     constructor(achievements, emailType) {
         this.achievements = achievements;
@@ -20,7 +18,12 @@ class Reply {
         this.sendBtn.addEventListener('click', this.onSendBtnClick);
         this.closeBtn.addEventListener('click', this.onCloseBtnClick);
     }
+    removeListeners() {
+        this.sendBtn.removeEventListener('click', this.onSendBtnClick);
+        this.closeBtn.removeEventListener('click', this.onCloseBtnClick);
+    }
     onSendBtnClick(e) {
+        console.log("we send");
         e.preventDefault();
         switch(this.emailType) {
             case 'spam':
@@ -31,6 +34,7 @@ class Reply {
                 break;
             default:
                 this.achievements.showAchievement("reply-default");
+                break;
         }
         this.destroy();
     }
@@ -39,7 +43,10 @@ class Reply {
         this.destroy();
     }
     destroy() {
-        this.sendBtn.removeEventListener('click', this.onSendBtnClick);
+        console.log('are we getting to destroy??');
+        this.removeListeners();
+        this.achievements = null;
+        this.emailType = null;
         this.replySubject.value = '';
         this.replyBody.value = '';
         this.emailReply.style.display = 'none';

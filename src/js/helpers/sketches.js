@@ -59,23 +59,23 @@ const SketchFunctions = {
                 p5.remove();
             } else {
                 p5.background(255);
-                p5.updateBalls();
-                p5.bounceBalls();
-                p5.renderBalls();
+                p5.update();
+                p5.bounce();
+                p5.render();
                 p5.textAlign(p5.CENTER, p5.CENTER);
                 p5.fill(0);
                 p5.textSize(100 * fontMultiplier);
                 p5.text("OVER 100 POINTS!\nKEEP IT UP!", window.innerWidth/2, window.innerHeight/2);
             }
         }
-        p5.updateBalls = () => {
+        p5.update = () => {
             let i = balls.length;
             while (i--) {
                 balls[i].y = balls[i].y + balls[i].speedY;
                 balls[i].x = balls[i].x + balls[i].speedX;
             }
         }
-        p5.bounceBalls = () => {
+        p5.bounce = () => {
             let i = balls.length;
             while (i--) {
                 if((balls[i].x > window.innerWidth) || (balls[i].x < 0)) {
@@ -86,7 +86,7 @@ const SketchFunctions = {
                 }
             }
         }
-        p5.renderBalls = () => {
+        p5.render = () => {
             let i = balls.length;
             while (i--) {
                 p5.fill(balls[i].color);
@@ -121,22 +121,22 @@ const SketchFunctions = {
                 p5.remove();
             } else {
                 p5.background(255);
-                p5.updateBalls();
-                p5.bounceBalls();
-                p5.renderBalls();
+                p5.update();
+                p5.bounce();
+                p5.render();
                 p5.textAlign(p5.CENTER, p5.CENTER);
                 p5.fill(0);
                 p5.textSize(100 * fontMultiplier);
                 p5.text("OVER 200 POINTS!\nGOOD JOB!", window.innerWidth/2, window.innerHeight/2);
             }
         }
-        p5.updateBalls = () => {
+        p5.update = () => {
             let i = balls.length;
             while (i--) {
                 balls[i].diameter = balls[i].diameter + balls[i].speedD;
             }
         }
-        p5.bounceBalls = () => {
+        p5.bounce = () => {
             let i = balls.length;
             while (i--) {
                 if((balls[i].diameter > maxD) || (balls[i].diameter <= 20)) {
@@ -144,7 +144,7 @@ const SketchFunctions = {
                 }
             }
         }
-        p5.renderBalls = () => {
+        p5.render = () => {
             let i = balls.length;
             while (i--) {
                 p5.fill(balls[i].color);
@@ -181,23 +181,23 @@ const SketchFunctions = {
                 p5.remove();
             } else {
                 p5.background(255);
-                p5.updateBalls();
-                p5.bounceBalls();
-                p5.renderBalls();
+                p5.update();
+                p5.bounce();
+                p5.render();
                 p5.textAlign(p5.CENTER, p5.CENTER);
                 p5.fill(0);
                 p5.textSize(100 * fontMultiplier);
                 p5.text("OVER 300 POINTS!\nAMAZING!", window.innerWidth/2, window.innerHeight/2);
             }
         }
-        p5.updateBalls = () => {
+        p5.update = () => {
             let i = balls.length;
             while (i--) {
                 balls[i].y = balls[i].y + balls[i].speedY;
                 balls[i].x = balls[i].x + balls[i].speedX;
             }
         }
-        p5.bounceBalls = () => {
+        p5.bounce = () => {
             let i = balls.length;
             while (i--) {
                 if((balls[i].x > window.innerWidth) || (balls[i].x < 0)) {
@@ -208,11 +208,167 @@ const SketchFunctions = {
                 }
             }
         }
-        p5.renderBalls = () => {
+        p5.render = () => {
             let i = balls.length;
             while (i--) {
                 p5.fill(balls[i].color);
                 p5.rect(balls[i].x, balls[i].y, balls[i].heightX, balls[i].heightY);
+            }
+        }
+        p5.destroy = () => {
+            console.log('we should destroy');
+            shouldDestroy = true;
+        }
+    },
+    reward4: (p5) => {
+        let balls = [];
+        let shouldDestroy = false;
+        p5.setup = () => {
+            p5.createCanvas(window.innerWidth, window.innerHeight);
+            p5.background(255);
+            p5.noStroke();
+        }
+        p5.draw = () => {
+            if (shouldDestroy) {
+                p5.remove();
+            } else {
+                p5.background(255);
+                for (let i = 0; i < window.innerWidth; i += 100) {
+                    p5.render(i);
+                }
+                p5.textAlign(p5.CENTER, p5.CENTER);
+                p5.fill(0);
+                p5.textSize(100 * fontMultiplier);
+                p5.text("OVER 400 POINTS!\nINCREDIBLE!", window.innerWidth/2, window.innerHeight/2);
+            }
+        }
+        p5.render = (i) => {
+            let j = 0;
+            while(j < window.innerHeight) {
+                let rand = Math.floor(Math.random() * 2);
+                if (rand == 1) {
+                    p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                    p5.rect(i, j, 100, 100);
+                } else {
+                    p5.fill(255);
+                    p5.rect(i, j, 100, 100);
+                }
+                j += 100;
+            }
+        }
+        p5.destroy = () => {
+            console.log('we should destroy');
+            shouldDestroy = true;
+        }
+    },
+    reward5: (p5) => {
+        let balls = [];
+        let shouldDestroy = false;
+        p5.setup = () => {
+            p5.createCanvas(window.innerWidth, window.innerHeight);
+            p5.background(255);
+            p5.noStroke();
+        }
+        p5.draw = () => {
+            if (shouldDestroy) {
+                p5.remove();
+            } else {
+                p5.background(255);
+                for (let i = 0; i < window.innerWidth; i += 100) {
+                    p5.render(i);
+                }
+                p5.textAlign(p5.CENTER, p5.CENTER);
+                p5.fill(0);
+                p5.textSize(100 * fontMultiplier);
+                p5.text("OVER 500 POINTS!\nYOU'RE ON FIRE!", window.innerWidth/2, window.innerHeight/2);
+            }
+        }
+        p5.render = (i) => {
+            let j = 0;
+            while(j < window.innerHeight) {
+                p5.push();
+                p5.translate(i, j);
+                p5.rotate(p5.radians(p5.frameCount));
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.triangle(0, 0, 50, 100, 100, 0);
+                p5.pop();
+                j += 100;
+            }
+        }
+        p5.destroy = () => {
+            console.log('we should destroy');
+            shouldDestroy = true;
+        }
+    },
+    reward6: (p5) => {
+        let shouldDestroy = false;
+        p5.setup = () => {
+            p5.createCanvas(window.innerWidth, window.innerHeight);
+            p5.background(255);
+            p5.noStroke();
+        }
+        p5.draw = () => {
+            if (shouldDestroy) {
+                p5.remove();
+            } else {
+                p5.background(255);
+                for (let i = 0; i < window.innerWidth; i += 100) {
+                    p5.render(i);
+                }
+                p5.textAlign(p5.CENTER, p5.CENTER);
+                p5.fill(0);
+                p5.textSize(100 * fontMultiplier);
+                p5.text("OVER 600 POINTS!\nGODDAMN!", window.innerWidth/2, window.innerHeight/2);
+            }
+        }
+        p5.render = (i) => {
+            let j = 0;
+            while(j < window.innerHeight) {
+                p5.push();
+                p5.translate(i, j);
+                p5.shearX(p5.radians(p5.frameCount));
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.rect(20, 20, 60, 60);
+                p5.pop();
+                j += 100;
+            }
+        }
+        p5.destroy = () => {
+            console.log('we should destroy');
+            shouldDestroy = true;
+        }
+    },
+    reward7: (p5) => {
+        let shouldDestroy = false;
+        p5.setup = () => {
+            p5.createCanvas(window.innerWidth, window.innerHeight);
+            p5.background(255);
+            p5.noStroke();
+        }
+        p5.draw = () => {
+            if (shouldDestroy) {
+                p5.remove();
+            } else {
+                p5.background(255);
+                for (let i = 0; i < window.innerWidth; i += 100) {
+                    p5.render(i);
+                }
+                p5.textAlign(p5.CENTER, p5.CENTER);
+                p5.fill(0);
+                p5.textSize(100 * fontMultiplier);
+                p5.text("OVER 700 POINTS!\nWOW!", window.innerWidth/2, window.innerHeight/2);
+            }
+        }
+        p5.render = (i) => {
+            let j = 0;
+            while(j < window.innerHeight) {
+                p5.push();
+                p5.translate(i, j);
+                p5.shearY(p5.radians(p5.frameCount));
+                p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+                p5.ellipse(0, 0, 100, 100);
+                p5.pop();
+                j += 100;
             }
         }
         p5.destroy = () => {

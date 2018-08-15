@@ -36,7 +36,7 @@ module.exports = {
     },
     "reply-to-personal": {
         "body": "Replied to something personal",
-        "points": 80,
+        "points": 50,
         "hasRun": false
     }
 }
