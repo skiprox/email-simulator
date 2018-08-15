@@ -40,6 +40,7 @@ class Achievements {
             // Show the animations
             if (document.getElementById('p5-fullpage').style.display == 'none') {
                 if (this.achievementSketchLevel == 0 && this.achievementPoints >= 100) {
+                    document.body.classList.add('over-100');
                     this.achievementSketchLevel++;
                     let fullScreenGlitch = new p5(SketchFunctions.reward1, 'p5-fullpage');
                     document.getElementById('p5-fullpage').style.display = 'block';
@@ -48,6 +49,7 @@ class Achievements {
                         fullScreenGlitch.destroy();
                     }, 5000);
                 } else if (this.achievementSketchLevel == 1 && this.achievementPoints >= 200) {
+                    document.body.classList.add('over-200');
                     this.achievementSketchLevel++;
                     let fullScreenGlitch = new p5(SketchFunctions.reward2, 'p5-fullpage');
                     document.getElementById('p5-fullpage').style.display = 'block';
@@ -56,6 +58,7 @@ class Achievements {
                         fullScreenGlitch.destroy();
                     }, 5000);
                 } else if (this.achievementSketchLevel == 2 && this.achievementPoints >= 300) {
+                    document.body.classList.add('over-300');
                     this.achievementSketchLevel++;
                     let fullScreenGlitch = new p5(SketchFunctions.reward3, 'p5-fullpage');
                     document.getElementById('p5-fullpage').style.display = 'block';
@@ -64,6 +67,7 @@ class Achievements {
                         fullScreenGlitch.destroy();
                     }, 5000);
                 } else if (this.achievementSketchLevel == 3 && this.achievementPoints >= 400) {
+                    document.body.classList.add('over-400');
                     this.achievementSketchLevel++;
                     let fullScreenGlitch = new p5(SketchFunctions.reward4, 'p5-fullpage');
                     document.getElementById('p5-fullpage').style.display = 'block';
@@ -72,6 +76,7 @@ class Achievements {
                         fullScreenGlitch.destroy();
                     }, 5000);
                 } else if (this.achievementSketchLevel == 4 && this.achievementPoints >= 500) {
+                    document.body.classList.add('over-500');
                     this.achievementSketchLevel++;
                     let fullScreenGlitch = new p5(SketchFunctions.reward5, 'p5-fullpage');
                     document.getElementById('p5-fullpage').style.display = 'block';
@@ -80,6 +85,7 @@ class Achievements {
                         fullScreenGlitch.destroy();
                     }, 5000);
                 } else if (this.achievementSketchLevel == 5 && this.achievementPoints >= 600) {
+                    document.body.classList.add('over-600');
                     this.achievementSketchLevel++;
                     let fullScreenGlitch = new p5(SketchFunctions.reward6, 'p5-fullpage');
                     document.getElementById('p5-fullpage').style.display = 'block';
@@ -88,6 +94,7 @@ class Achievements {
                         fullScreenGlitch.destroy();
                     }, 5000);
                 } else if (this.achievementSketchLevel == 6 && this.achievementPoints >= 700) {
+                    document.body.classList.add('over-700');
                     this.achievementSketchLevel++;
                     let fullScreenGlitch = new p5(SketchFunctions.reward7, 'p5-fullpage');
                     document.getElementById('p5-fullpage').style.display = 'block';
