@@ -26,11 +26,14 @@ const SketchFunctions = {
                 p5.text("the game", window.innerWidth/2, window.innerHeight/2 + 30);
                 p5.fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
                 p5.textSize(32 * fontMultiplier);
-                p5.text("(click anywhere to start)", window.innerWidth/2, window.innerHeight/2 + 100);
+                p5.text("(hit any key to start)", window.innerWidth/2, window.innerHeight/2 + 100);
             }
         }
         p5.mousePressed = () => {
             console.log('hello world!');
+            p5.destroy();
+        }
+        p5.keyReleased = () => {
             p5.destroy();
         }
         p5.destroy = () => {

@@ -6,7 +6,7 @@ const imagemin = require('gulp-imagemin');
 const gulpif = require('gulp-if');
 const sequence = require('gulp-sequence');
 
-const SRC = ['**/*.{png,jpg}'];
+const SRC = ['**/*.{png,jpg,gif}'];
 
 module.exports = function init(name, gulp, config, tasks) {
 	const cwd = config.dir.source;

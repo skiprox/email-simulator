@@ -26,6 +26,7 @@ class Email {
         this.closeEmail = this.closeEmail.bind(this);
         this.onActionClick = this.onActionClick.bind(this);
         this.onReplyClick = this.onReplyClick.bind(this);
+        this.onKeyup = this.onKeyup.bind(this);
         this.createHTML(this.emailIndex);
         this.addListeners();
     }
@@ -42,6 +43,7 @@ class Email {
     addListeners() {
         this.line.addEventListener('click', this.onEmailClick);
         this.actionIcon.addEventListener('click', this.onActionClick);
+        window.addEventListener('keyup', this.onKeyup);
     }
     onEmailClick(e) {
         e.preventDefault();
@@ -56,6 +58,12 @@ class Email {
             this.line.classList.remove('active');
         } else {
             this.line.classList.add('active');
+        }
+    }
+    onKeyup(e) {
+        let key = e.keyCode ? e.keyCode : e.which;
+        if (key === 27) {
+            this.closeEmail();
         }
     }
     openEmail() {
@@ -90,6 +98,7 @@ class Email {
         this.emailOpenContainer.style.display = 'none';
         this.emailCloseBtn.removeEventListener('click', this.closeEmail);
         this.emailReplyBtn.removeEventListener('click', this.onReplyClick);
+        window.removeEventListener('keyup', this.onKeyup);
     }
     onReplyClick(e) {
         e.preventDefault();
