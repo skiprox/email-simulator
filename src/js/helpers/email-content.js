@@ -3,7 +3,7 @@ module.exports = [
         "from": "E-Mail Corp",
         "subject": "Welcome to E-Mail Corp",
         "type": "notification",
-        "body": "Welcome to E-Mail Corp! We're so happy you've decided to use our email service! Please make yourself familiar with your new inbox.<br>You can refresh your emails to get the latest, and delete them to declutter your inbox.<br>You will be rewarded for most of actions you take – try to get the most points :)"
+        "body": "Welcome to E-Mail Corp! We're so happy you've decided to use our email service! Please make yourself familiar with your new inbox.<br>You can refresh your emails to get the latest, and delete them to declutter your inbox.<br>You will be rewarded for most of the actions you take – try to get the most points :)"
     },
     {
         "from": "Godiva",
