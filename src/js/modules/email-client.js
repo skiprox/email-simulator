@@ -83,8 +83,9 @@ class EmailClient {
             clearInterval(this.emailInterval);
         }
         if (this.numberOfEmails == this.totalEmails) {
-            if (this.btnRefresh) {
+            if (this.btnRefresh !== null) {
                 this.btnRefresh.parentElement.removeChild(this.btnRefresh);
+                this.btnRefresh = null;
             }
             clearInterval(this.emailInterval);
         }
